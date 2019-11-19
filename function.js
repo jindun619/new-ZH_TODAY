@@ -96,19 +96,19 @@ function menuIntoBldObj (menuObj, paraBld) {
 function navLeftHandler () {
     dateVar.setDate(dateVar.getDate() - 1);
     const YMD = dateIntoYMD(dateVar);
-    window.location.href = `http://zhenhuatoday.com/newZT/index.html?date=${YMD}`;  /* 링크 */
+    window.location.href = `http://zhenhuatoday.com/index.html?date=${YMD}`;  /* 링크 *///
 }
 //when clicks center of the navigator
 function navCenterHandler () {
     dateVar = new Date();
     const YMD = dateIntoYMD(dateVar);
-    window.location.href = `http://zhenhuatoday.com/newZT/index.html?date=${YMD}`;  /* 링크 */
+    window.location.href = `http://zhenhuatoday.com/index.html?date=${YMD}`;  /* 링크 */
 }
 //when clicks the right side of the navigator
 function navRightHandler () {
     dateVar.setDate(dateVar.getDate() + 1);
     const YMD = dateIntoYMD(dateVar);
-    window.location.href = `http://zhenhuatoday.com/newZT/index.html?date=${YMD}`;  /* 링크 */
+    window.location.href = `http://zhenhuatoday.com/index.html?date=${YMD}`;  /* 링크 */
 }
 //when clicks the language-convert button
 function langHandler () {
