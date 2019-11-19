@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>input food page</title>
+</head>
+<body>
+    <form action="input_handle.php" method="POST" enctype="multipart/form-data" id="input_form">
+        <input type="text" name="kor_name" placeholder="한국이름"><br>
+        <input type="text" name="cna_name" placeholder="중국이름"><br>
+        <p>국인가요?</p><input type="checkbox" name="soup" value="1"><br>
+        <input type="file" name="file">
+        <input type="submit" name="food_submit" value="등록">
+    </form>
+</body>
+</html>
