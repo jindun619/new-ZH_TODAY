@@ -186,6 +186,7 @@ function paintArticles (id, lang) {
     p.appendChild(a);
     textBoxDiv.appendChild(p);
 
+    
     //.articles > .imgBox
     const imgName = `/food_img/${id}.${idGetExt(id)}`;    /* 경로 */
     const img = document.createElement("img"),

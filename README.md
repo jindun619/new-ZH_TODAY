@@ -1,5 +1,5 @@
 # 振华TODAY
-***
+[→LINK←](http://zhenhuatoday.com)
 ***
 
 ## 1) What is 振华TODAY
@@ -19,13 +19,13 @@
 ## 2) Why I made 振华TODAY
 ### 2.1 Convenience of students
 `"I decided to develop a website when I saw that students were inconvenient not knowing the school meals"`
-### 2.2 Improvement of the quality of the school meals
+### 2.2 Improvement of the quality
 ![vicious cycle](img/vicious_cycle.png)
 `->Because the quality of food is low, nobody comes to eat.`
 `->Because nobody comes to eat, waste of food increases.`
 `->Because waste of food increases, food is cooked with leftovers.`
 `->Because food is cooked with leftovers, food loses its quality`
-**`"After analyzing the cause of low quality of the school meals, I found out that the four thinigs above(↑) form a vicious cycle. And I thought one way to break the cycle was to let students know the school meals in advance."`**
+**`"After analyzing the cause of low quality of the school meals, I found out that the four things above(↑) form a vicious cycle. And I thought one way to break the cycle was to let students know the school meals in advance."`**
 
 ***
 
