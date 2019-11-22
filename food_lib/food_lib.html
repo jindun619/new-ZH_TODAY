@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>오늘의 급식은? :: 振华TODAY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="whole_container">
+        <!-- HEADER -->
+        <header id="header">
+            <div class="relative">
+                <a id="logo" href="">振华TODAY</a>
+                <div id="searchBox_div">
+                    <form>
+                        <input type="text" placeholder="s e a r c h">
+                    </form>
+                </div>
+                <span class="js-clock" id="clock">00:00:00</span>
+                <a id="langBtn" class="js-langBtn">한</a>
+            </div>
+        </header>
+        <!-- NAVIGATOR -->
+        <nav id="nav" class="js-nav">
+            <div class="nav_menu js-navLeft"><p>어제</p></div>
+            <div class="nav_menu js-navCenter"><p>오늘</p></div>
+            <div class="nav_menu js-navRight"><p>내일</p></div>
+            <span id="calBtn" class="js-calBtn">
+                <img src="icon/calendar.png"></img>
+            </span>
+        </nav>
+        <!-- ARTICLE -->
+        <div id="article">
+            <div id="article_container">
+                <span id="dateBox" class="js-dateBox">0000-00-00</span>
+                <!-- articles example
+                <span class="bldBox">Breakfast</span>
+                
+                <div class="articles">
+                    <div class="textBox">
+                        <p><a href="">text1</a></p>
+                    </div>
+                    <div class="imgBox">
+                        <img src="img/god.jpg">
+                    </div>
+                </div>
+                -->
+            </div>
+        </div>
+        <!-- FOOTER -->
+        <footer id="footer">
+            <div class="relative">
+                <div id="source">
+                    <p>source from <a href="http://bing.com">Bing</a></p><br>
+                    <p>화면이 깨지는 분은 캐시 초기화를 해주세요!</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- load/set $food & $food_date -->
+    <? include "load_db.php"; ?>
+    <? include "load_session.php"; ?>
+    <script>
+        //PHP arrays into JS arrays
+        var food = <? echo json_encode($food); ?>;
+        var foodDate = <? echo json_encode($food_date); ?>;
+    </script>
+
+    
+    <!--  SCRIPTS -->
+    <script src="clock.js"></script>
+    <script src="weather.js"></script>
+    <script src="function.js"></script>
+    <script src="script.js"></script>
+    <? include "init.php"; ?>
+</body>
+</html>
