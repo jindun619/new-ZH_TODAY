@@ -81,7 +81,9 @@
             } else {
                 echo "error : only jpg, jpeg, png, pdf, jfif available";
             }
-        } /* food date input */else if ($_POST['date_submit']) {
+
+
+        } /* food date input */else if (isset($_POST['date_submit'])) {
             //getting POST
             $date = $_POST['date'];
             $bld = $_POST['bld'];
@@ -108,6 +110,17 @@
             mysqli_query($conn, $insert_query);
             header("Location:input_menu.html");
             exit();
+
+
+        } /* today word input */else if (isset($_POST['today_word_submit'])) {
+            $date = $_POST['date'];
+            $kor = $_POST['kor'];
+            $cna = $_POST['cna'];
+
+            $insert_query = "INSERT INTO today_word (date, kor_word, cna_word) VALUES ('$date', '$kor', '$cna')";
+            mysqli_query($conn, $insert_query);
+
+            header("Location:today_word.html");
         }
     ?>
 </body>

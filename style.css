@@ -135,7 +135,7 @@ body {
 }
 #nav .nav_menu {
     flex: 1;
-    color: #eeeeee;
+    color: var(--bg-color);
 }
 #nav .nav_menu p {
     width: 2em;
@@ -220,6 +220,32 @@ body {
     border-radius: 20px;
     box-shadow: 5px 5px 5px black;
     background-color: var(--border-color);
+}
+
+#article #today_word {
+    width: 7em;
+    height: auto;
+    text-align: center;
+    color: var(--main-color);
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 3px solid var(--main-color);
+    border-right: 3px solid var(--main-color);
+}
+
+#article #today_word:hover {
+    border-bottom: 2px dotted black;
+    cursor: pointer;
+}
+
+#article #today_word_real {
+    width: 10em;
+    height: auto;
+    text-align: center;
+    background-color: khaki;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--main-color);
 }
 
 .bldBox {

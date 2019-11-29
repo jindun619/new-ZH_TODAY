@@ -49,6 +49,8 @@
         <div id="article">
             <div id="article_container">
                 <span id="dateBox" class="js-dateBox">0000-00-00</span>
+                <!-- <span id="today_word" class="js-today_word">오늘의 한마디</span> -->
+                <span id="today_word_real" class="js-today_word_real notShowing">the real one</span>
                 <!-- articles example
                 <span class="bldBox">Breakfast</span>
                 
@@ -79,6 +81,7 @@
         //PHP arrays into JS arrays
         var food = <? echo json_encode($food); ?>;
         var foodDate = <? echo json_encode($food_date); ?>;
+        var todayWords = <? echo json_encode($today_word); ?>;
     </script>
 
     

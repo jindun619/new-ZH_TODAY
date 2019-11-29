@@ -12,6 +12,8 @@ const calBtn = document.querySelector(".js-calBtn");
 const cal = document.querySelector(".js-cal"),
     calTable = cal.querySelector("table"),
     calTbody = cal.querySelector("tbody");
+const todayWord = document.querySelector(".js-today_word"),
+    todayWordReal = document.querySelector(".js-today_word_real");
 
 function init () {
     paintWords();
@@ -22,6 +24,8 @@ function init () {
 
     langBtn.addEventListener("click", langHandler);
     // calBtn.addEventListener("click", calHandler);
+
+    todayWord.addEventListener("click", todayWordHandler);
 }
 
 init();

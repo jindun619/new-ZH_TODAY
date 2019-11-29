@@ -125,6 +125,27 @@ function calHandler () {
     nav.classList.toggle(NOTSHOWING_CN);
     cal.classList.toggle(NOTSHOWING_CN);
 }
+//when clicks today_word
+function todayWordHandler () {
+    const YMD = dateIntoYMD(dateVar);
+    //getting today's word
+    for (const [key, value] of Object.entries(todayWords)) {
+        if (value.date == YMD) {
+            theObj = value;
+            //notice : only one word for one day!!
+        }
+    }
+
+    if (getLang() == KOR_LANG) {
+        theWord = theObj.kor_word;
+    } else if (getLang() == CNA_LANG) {
+        theWord = theObj.cna_word;
+    }
+
+    todayWord.classList.toggle("notShowing");
+    todayWordReal.classList.toggle("notShowing");
+    todayWordReal.innerText = theWord;
+}
 
 /*          PAINT       */
 function paintWords () {
@@ -135,11 +156,13 @@ function paintWords () {
         navLeftP.innerText = "어제";
         navCenterP.innerText = "오늘";
         navRightP.innerText = "내일";
+        todayWord.innerText = "오늘의 한마디";
     } else if(gotLang == CNA_LANG) {
         langBtn.innerText = "한";
         navLeftP.innerText = "昨天";
         navCenterP.innerText = "今天";
         navRightP.innerText = "后天";
+        todayWord.innerText = "今日的一句话";
     }
 }
 
