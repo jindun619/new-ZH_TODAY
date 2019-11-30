@@ -156,13 +156,13 @@ function paintWords () {
         navLeftP.innerText = "어제";
         navCenterP.innerText = "오늘";
         navRightP.innerText = "내일";
-        todayWord.innerText = "오늘의 한마디";
+        todayWord.innerText = "클릭";
     } else if(gotLang == CNA_LANG) {
         langBtn.innerText = "한";
         navLeftP.innerText = "昨天";
         navCenterP.innerText = "今天";
         navRightP.innerText = "后天";
-        todayWord.innerText = "今日的一句话";
+        todayWord.innerText = "点击";
     }
 }
 
