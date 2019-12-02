@@ -136,6 +136,12 @@ function todayWordHandler () {
         }
     }
 
+    //if word is not set, then set a default value
+    if (typeof(theObj) === "undefined") {
+        theObj.kor_word = ">0<";
+        theObj.cna_word = ">0<";
+    }
+
     if (getLang() == KOR_LANG) {
         theWord = theObj.kor_word;
     } else if (getLang() == CNA_LANG) {
