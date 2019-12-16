@@ -25,7 +25,7 @@ function init () {
     langBtn.addEventListener("click", langHandler);
     // calBtn.addEventListener("click", calHandler);
 
-    todayWord.addEventListener("click", todayWordHandler);
+    // todayWord.addEventListener("click", todayWordHandler);
 }
 
 init();

@@ -138,19 +138,23 @@ function todayWordHandler () {
 
     ///if word is not set, then set a default value
     if (typeof(theObj) === "undefined") {
-        theWord = ">_<";
+        todayWordReal.classList.add("notShowing");
     } else {
         if (getLang() == KOR_LANG) {
             theWord = theObj.kor_word;
+            todayWordReal.innerText = theWord;
         } else if (getLang() == CNA_LANG) {
             theWord = theObj.cna_word;
+            todayWordReal.innerText = theWord;
         }
     }
 
 
-    todayWord.classList.toggle("notShowing");
-    todayWordReal.classList.toggle("notShowing");
-    todayWordReal.innerText = theWord;
+
+
+    // todayWord.classList.toggle("notShowing");
+    // todayWordReal.classList.toggle("notShowing");
+    // todayWordReal.innerText = theWord;
 }
 
 /*          PAINT       */
@@ -162,14 +166,16 @@ function paintWords () {
         navLeftP.innerText = "어제";
         navCenterP.innerText = "오늘";
         navRightP.innerText = "내일";
-        todayWord.innerText = "클릭";
+        // todayWord.innerText = "클릭";
     } else if(gotLang == CNA_LANG) {
         langBtn.innerText = "한";
         navLeftP.innerText = "昨天";
         navCenterP.innerText = "今天";
         navRightP.innerText = "后天";
-        todayWord.innerText = "点击";
+        // todayWord.innerText = "点击";
     }
+
+    todayWordHandler();
 }
 
 function paintBldBox (bld, lang) {
