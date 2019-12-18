@@ -49,4 +49,5 @@
 ***
 
 ## 4) Update notes
-- [2019-11-20] We made a large-scale design update; Most PHP codes were rewritten in Javascript.
+- [2019-11-20] Made a large-scale design update; Most PHP codes were rewritten in Javascript.
+- [2019-12-18] Made a d-day from university examinations.

@@ -18,6 +18,22 @@ function isweixin () {
 	}
 }
 
+
+function countDDay (from, to) {
+    //${from} and ${to} must be a date format!
+
+    let fromText = from.getFullYear() + '-' + (from.getMonth() + 1) + '-' + from.getDate();
+    let toText = to.getFullYear() + '-' + (to.getMonth() + 1) + '-' + to.getDate();
+
+    let du = to.getTime() - from.getTime();
+    let dayTime = 1000 * 60 * 60 * 24;
+
+    let result = Math.ceil(du / dayTime);
+
+    return result;
+}
+
+
 function getLang () {
     const gotLang = localStorage.getItem(LANG_LS);
 
@@ -158,6 +174,26 @@ function todayWordHandler () {
 }
 
 /*          PAINT       */
+function paintDDays () {
+    const nowDate = new Date(),
+        pkuDate = new Date(2020, 2, 28),
+        fudanDate = new Date(2020, 1, 29),
+        renminDate = new Date(2020, 2, 7);
+    const toPku = countDDay (nowDate, pkuDate),
+    toFudan = countDDay (nowDate, fudanDate),
+    toRenmin = countDDay (nowDate, renminDate);
+
+    const pkuP = document.querySelector(".js-pkuDDay"),
+    fudanP = document.querySelector(".js-fudanDDay"),
+    renminP = document.querySelector(".js-renminDDay");
+
+    pkuP.innerText = `D-${toPku}`;
+    fudanP.innerText = `D-${toFudan}`;
+    renminP.innerText = `D-${toRenmin}`;
+
+    // console.log(toPku,toFudan,toRenmin);
+}
+
 function paintWords () {
     const gotLang = localStorage.getItem(LANG_LS);
     
@@ -176,6 +212,8 @@ function paintWords () {
     }
 
     todayWordHandler();
+
+    paintDDays();
 }
 
 function paintBldBox (bld, lang) {
