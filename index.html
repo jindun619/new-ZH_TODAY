@@ -123,10 +123,20 @@
                 </div>
             </div>
         </footer>
+
+        <!-- SNOW EFFECT -->
+        <div id="js-snowBox" class="snowBox"></div>
+
     </div>
     <!-- load/set $food & $food_date -->
     <? include "load_db.php"; ?>
     <? include "load_session.php"; ?>
+
+
+    <!-- SNOW EFFECT SCRIPT -->
+    <script src="snow/particles.js"></script>
+    <script src="snow/app.js"></script>
+
     <script>
         //PHP arrays into JS arrays
         var food = <? echo json_encode($food); ?>;
