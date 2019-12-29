@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>input menu page</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <form action="input_handle.php" method="POST" id="input_form">
+    <form action="input_handle.php" method="POST" id="inputMenu_form">
         <input type="date" name="date"><br>
         <select name="bld">
             <option value="0">아침</option>
@@ -15,19 +16,20 @@
             <option value="2">저녁</option>
         </select>
         <br>
-            <input type="text" name="soup" placeholder="국"><br>
-            <div class="suggestions"></div>
-            <input type="text" name="food1" placeholder="음식1"><br>
-            <div class="suggestions"></div>
-            <input type="text" name="food2" placeholder="음식2"><br>
-            <div class="suggestions"></div>
-            <input type="text" name="food3" placeholder="음식3"><br>
-            <div class="suggestions"></div>
-            <input type="text" name="food4" placeholder="음식4"><br>
-            <div class="suggestions"></div>
-            <input type="text" name="food5" placeholder="음식5"><br>
-            <div class="suggestions"></div>
+        <input type="text" autocomplete="off" name="soup" placeholder="국" class="inputBox js-inputBox"><br>
+        <input type="text" autocomplete="off" name="food1" placeholder="음식1" class="inputBox js-inputBox"><br>
+        <input type="text" autocomplete="off" name="food2" placeholder="음식2" class="inputBox js-inputBox"><br>
+        <input type="text" autocomplete="off" name="food3" placeholder="음식3" class="inputBox js-inputBox"><br>
+        <input type="text" autocomplete="off" name="food4" placeholder="음식4" class="inputBox js-inputBox"><br>
+        <input type="text" autocomplete="off" name="food5" placeholder="음식5" class="inputBox js-inputBox"><br>
         <input type="submit" name="date_submit" value="등록">
     </form>
+    
+
+    <? include "../load_db.php";?>
+    <script>
+        var food = <? echo json_encode($food); ?>;
+    </script>
+    <script src="autoCpl.js"></script>
 </body>
 </html>

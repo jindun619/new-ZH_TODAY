@@ -51,3 +51,4 @@
 ## 4) Update notes
 - [2019-11-20] Made a large-scale design update; Most PHP codes were rewritten in Javascript.
 - [2019-12-18] Made a d-day from university examinations.
+- [2019-12-29] Made a auto-complete function for menu-input
