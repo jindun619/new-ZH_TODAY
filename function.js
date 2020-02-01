@@ -188,7 +188,7 @@ function paintDDays () {
     renminP = document.querySelector(".js-renminDDay");
 
     pkuP.innerText = `D-${toPku}`;
-    fudanP.innerText = `D-${toFudan}`;
+    // fudanP.innerText = `D-${toFudan}`;   복단대 무기한 연장
     renminP.innerText = `D-${toRenmin}`;
 
     // console.log(toPku,toFudan,toRenmin);
