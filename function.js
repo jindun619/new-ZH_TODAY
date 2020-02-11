@@ -189,7 +189,7 @@ function paintDDays () {
 
     pkuP.innerText = `D-${toPku}`;
     // fudanP.innerText = `D-${toFudan}`;   복단대 무기한 연장
-    renminP.innerText = `D-${toRenmin}`;
+    // renminP.innerText = `D-${toRenmin}`; 인민대 무기한 연장
 
     // console.log(toPku,toFudan,toRenmin);
 }
