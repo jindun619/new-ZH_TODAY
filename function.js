@@ -187,11 +187,9 @@ function paintDDays () {
     fudanP = document.querySelector(".js-fudanDDay"),
     renminP = document.querySelector(".js-renminDDay");
 
-    pkuP.innerText = `D-${toPku}`;
+    // pkuP.innerText = `D-${toPku}`;       북경대 무기한 연장
     // fudanP.innerText = `D-${toFudan}`;   복단대 무기한 연장
     // renminP.innerText = `D-${toRenmin}`; 인민대 무기한 연장
-
-    // console.log(toPku,toFudan,toRenmin);
 }
 
 function paintWords () {
