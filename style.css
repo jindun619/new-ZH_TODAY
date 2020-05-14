@@ -1,539 +1,516 @@
 :root {
-    --main-color: mediumorchid;
-    /* --main-color: rgb(212, 36, 38); CHRISTMAS THEME*/
-    --sub-color: khaki;
-    --bg-color: #eeeeee;
-    --container-color: #dddddd;
-    --border-color: #bbbbbb;
+  --main-color: mediumorchid;
+  /* --main-color: rgb(212, 36, 38); CHRISTMAS THEME*/
+  --sub-color: khaki;
+  --bg-color: #eeeeee;
+  --container-color: #dddddd;
+  --border-color: #bbbbbb;
 }
-
-
-
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 body {
-    background-color: var(--bg-color);
+  background-color: var(--bg-color);
 }
 #whole_container {
-    width: 800px;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
+  width: 800px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media (max-width: 768px) {
-    #whole_container {
-        width: 100%;
-        border: none;
-    }
+  #whole_container {
+    width: 100%;
+    border: none;
+  }
 }
-
-
-
-
-
 
 /* HEADER */
 #header {
-    width: 100%;
-    height: 2em;
-    background-color: var(--bg-color);
-    font-size: 2rem;
-    z-index: 10;
+  width: 100%;
+  height: 2em;
+  background-color: var(--bg-color);
+  font-size: 2rem;
+  z-index: 10;
 }
 
 #header #logo {
-    position: absolute;
-    left: 0.5em;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--main-color);
-    text-decoration: none;
-    z-index: 1;
+  position: absolute;
+  left: 0.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--main-color);
+  text-decoration: none;
+  z-index: 1;
 }
 #header #logo:hover {
-    border-bottom: 2px dotted black;
+  border-bottom: 2px dotted black;
 }
 
 #header #searchBox_div {
-    position: absolute;
-    left: 50%;
-    font-size: 2.5rem;
-    transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  font-size: 2.5rem;
+  transform: translateX(-50%);
 }
 #header #searchBox_div input {
-    all: unset;
-    width: 7em;
-    height: 1em;
-    text-align: center;
-    font-size: 2rem;
-    border-left: 2px solid var(--main-color);
-    border-right: 2px solid var(--main-color);
+  all: unset;
+  width: 7em;
+  height: 1em;
+  text-align: center;
+  font-size: 2rem;
+  border-left: 2px solid var(--main-color);
+  border-right: 2px solid var(--main-color);
 }
-@media (max-width:768px) {
-    #header #searchBox_div {
-        display: none;
-    }
+@media (max-width: 768px) {
+  #header #searchBox_div {
+    display: none;
+  }
 }
 
 #header #clock {
-    position: absolute;
-    right: 1.5em;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 1em;
-    font-size: 2.5rem;
+  position: absolute;
+  right: 1.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1em;
+  font-size: 2.5rem;
 }
-@media (max-width:768px) {
-    #header #clock {
-        height: 1em;
-        right: 0.5em;
-        font-size: 2rem;
-    }
+@media (max-width: 768px) {
+  #header #clock {
+    height: 1em;
+    right: 0.5em;
+    font-size: 2rem;
+  }
 }
 
 #header #langBtn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 1.5em;
-    height: 1.5em;
-    text-align: center;
-    font-size: 2rem;
-    text-decoration: none;
-    color:var(--bg-color);
-    background-color: var(--main-color);
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--bg-color);
+  background-color: var(--main-color);
+  z-index: 1;
 }
 #header #langBtn:hover {
-    border: 2px dotted black;
-    cursor: pointer;
+  border: 2px dotted black;
+  cursor: pointer;
 }
-@media (max-width:768px) {
-    #header #langBtn {
-        font-size: 1rem;
-    }
+@media (max-width: 768px) {
+  #header #langBtn {
+    font-size: 1rem;
+  }
 }
-
-
-
-
 
 /* NAVIGATOR */
 #nav {
-    display: flex;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    width: 100%;
-    height: 1.5em;
-    background-color: var(--main-color);
-    font-size: 2em;
-    z-index: 10;
-    box-shadow: 5px 5px 5px black;
+  display: flex;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  width: 100%;
+  height: 1.5em;
+  background-color: var(--main-color);
+  font-size: 2em;
+  z-index: 10;
+  box-shadow: 5px 5px 5px black;
 }
 #nav .nav_menu {
-    flex: 1;
-    color: var(--bg-color);
+  flex: 1;
+  color: var(--bg-color);
 }
 #nav .nav_menu p {
-    width: 2em;
-    margin-left: auto;
-    margin-right: auto;
+  width: 2em;
+  margin-left: auto;
+  margin-right: auto;
 }
 #nav .nav_menu p:hover {
-    border-bottom: 2px dotted black;
-    cursor: pointer;
+  border-bottom: 2px dotted black;
+  cursor: pointer;
 }
 #nav #calBtn {
-    /**/display: none;
-    position: absolute;
-    right: 0;
-    width: 1.5em;
-    height: 1.5em;
+  /**/
+  display: none;
+  position: absolute;
+  right: 0;
+  width: 1.5em;
+  height: 1.5em;
 }
 #nav #calBtn:active {
-    cursor: pointer;
-    opacity: 0.5;
+  cursor: pointer;
+  opacity: 0.5;
 }
 #nav #calBtn img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
-@media(max-width:768px) {
-    #nav .nav_menu {
-        flex: 3;
-    }
-    #nav #calBtn {
-        position: static;
-        flex: 1;
-    }
+@media (max-width: 768px) {
+  #nav .nav_menu {
+    flex: 3;
+  }
+  #nav #calBtn {
+    position: static;
+    flex: 1;
+  }
 }
-
 
 /*   CALENDAR  */
 #calendar {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 1.5em;
-    width: 100%;
-    font-size: 2rem;
-    height: auto;
-    background-color: aqua;
-    z-index: 11;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 1.5em;
+  width: 100%;
+  font-size: 2rem;
+  height: auto;
+  background-color: aqua;
+  z-index: 11;
 }
 
 #calendar table {
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
 }
 #calendar td {
-    width: 1em;
-    height: 1em;
-    background-color: grey;
+  width: 1em;
+  height: 1em;
+  background-color: grey;
 }
 
 /* ARTICLE */
 #article {
-    background-color: var(--bg-color);
-    font-size: 3rem;
-    height: auto;
+  background-color: var(--bg-color);
+  font-size: 3rem;
+  height: auto;
 }
 
 #article_container {
-    display: flex;
-    width: 90%;
-    padding-top: 1em;
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
+  display: flex;
+  width: 90%;
+  padding-top: 1em;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #article #dateBox {
-    width: 10em;
-    height: 1.5em;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0.5em;
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px black;
-    background-color: var(--border-color);
+  width: 10em;
+  height: 1.5em;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5em;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px black;
+  background-color: var(--border-color);
 }
 
 #article #weatherBox {
-    display: none;
-    width: 10em;
-    height: 1em;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1em;
-    background-color: khaki;
+  display: none;
+  width: 10em;
+  height: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+  background-color: khaki;
 }
 
 #article #weatherBox span {
-    flex: 1;
-    text-align: center;
-    font-size: 2rem;
+  flex: 1;
+  text-align: center;
+  font-size: 2rem;
 }
 
 #article #weatherBox #weather {
-    border-left: 3px solid var(--main-color);
+  border-left: 3px solid var(--main-color);
 }
 
 #article #weatherBox #temp {
-    border-left: 3px solid var(--main-color);
-    border-right: 3px solid var(--main-color);
+  border-left: 3px solid var(--main-color);
+  border-right: 3px solid var(--main-color);
 }
 
 #article #weatherBox #sun {
-    border-right: 3px solid var(--main-color);
+  border-right: 3px solid var(--main-color);
 }
 
 #article #today_word {
-    width: 7em;
-    height: auto;
-    text-align: center;
-    color: var(--main-color);
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1em;
-    border-left: 3px solid var(--main-color);
-    border-right: 3px solid var(--main-color);
+  width: 7em;
+  height: auto;
+  text-align: center;
+  color: var(--main-color);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+  border-left: 3px solid var(--main-color);
+  border-right: 3px solid var(--main-color);
 }
 
 #article #today_word:hover {
-    border-bottom: 2px dotted black;
-    cursor: pointer;
+  border-bottom: 2px dotted black;
+  cursor: pointer;
 }
 
-#article #today_word_real {
-    width: 10em;
-    height: auto;
-    text-align: center;
-    background-color: khaki;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1em;
-    color: var(--main-color);
+#article #today_word_real,
+#corona_notice {
+  width: 10em;
+  height: auto;
+  text-align: center;
+  background-color: khaki;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+  color: var(--main-color);
 }
-
-
 
 #article #dDayBox {
-    width: 10em;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1em;
+  width: 10em;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
 }
 
 #article #dDayBox .dDayItems {
-    display: flex;
-    width: 100%;
-    height: auto;
-    float: left;
-    margin-bottom: 0.2em;
-    background-color: var(--container-color);
-    border-radius: 25px;
+  display: flex;
+  width: 100%;
+  height: auto;
+  float: left;
+  margin-bottom: 0.2em;
+  background-color: var(--container-color);
+  border-radius: 25px;
 }
 
 #article #dDayBox .dDayItems .dDayLeft {
-    flex: 1;
-    /* background-color: rosybrown; */
+  flex: 1;
+  /* background-color: rosybrown; */
 }
 #article #dDayBox .dDayItems .dDayLeft img {
-    width: 100%;
-    /* height: 100%; */
+  width: 100%;
+  /* height: 100%; */
 }
 
 #article #dDayBox .dDayItems .dDayMiddle {
-    position: relative;
-    flex: 2;
-    /* background-color: seagreen; */
+  position: relative;
+  flex: 2;
+  /* background-color: seagreen; */
 }
 #article #dDayBox .dDayItems .dDayMiddle .dDayName {
-    position: absolute;
-    top: 30%;
-    transform: translateY(-50%);
-    font-size: 2rem;
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  font-size: 2rem;
 }
 #article #dDayBox .dDayItems .dDayMiddle .dDayDate {
-    position: absolute;
-    left: 40%;
-    transform: translateX(-50%);
-    top: 50%;
-    font-size: 1rem;
+  position: absolute;
+  left: 40%;
+  transform: translateX(-50%);
+  top: 50%;
+  font-size: 1rem;
 }
 
 #article #dDayBox .dDayItems .dDayRight {
-    position: relative;
-    flex: 1;
-    /* background-color: steelblue; */
+  position: relative;
+  flex: 1;
+  /* background-color: steelblue; */
 }
 #article #dDayBox .dDayItems .dDayRight .dDayDays {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: red;
-    font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: red;
+  font-size: 1.5rem;
 }
-
 
 /* 코로나 예방수칙 */
 #article #corona {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 #article #corona img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
-
 .bldBox {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 1em;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    border-radius: 20px;
-    background-color: var(--sub-color);
-    z-index: 10;
-    box-shadow: 5px 5px 5px black;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 1em;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-radius: 20px;
+  background-color: var(--sub-color);
+  z-index: 10;
+  box-shadow: 5px 5px 5px black;
 }
 
 .articles {
-    width: 9em;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1em;
-    border-radius: 20px;
-    background-color: var(--container-color);
+  width: 9em;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+  border-radius: 20px;
+  background-color: var(--container-color);
 }
 
 .articles .textBox {
-    background-color: none;
-    height: 1em;
-    text-align: center;
-    border-bottom: 5px dotted var(--bg-color);
+  background-color: none;
+  height: 1em;
+  text-align: center;
+  border-bottom: 5px dotted var(--bg-color);
 }
 .articles .textBox p {
-    font-size: 2rem;
-    font-weight: bold;
+  font-size: 2rem;
+  font-weight: bold;
 }
 .articles .textBox a {
-    text-decoration: none;
-    color: var(--main-color);
+  text-decoration: none;
+  color: var(--main-color);
 }
 .articles .textBox a:hover {
-    border-bottom: 2px dotted black;
+  border-bottom: 2px dotted black;
 }
 
 .articles .imgBox {
-    width: 80%;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    margin-top: 0.5em;
-    background-color: none;
+  width: 80%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0.5em;
+  background-color: none;
 }
 .articles .imgBox img {
+  width: 100%;
+  border: 2px solid var(--main-color);
+  border-radius: 50px;
+}
+
+@media (max-width: 768px) {
+  #article {
+    font-size: 2em;
+  }
+  #article #weatherBox span {
+    font-size: 0.75em;
+  }
+  .articles {
+    width: 90%;
+    height: auto;
+  }
+  .articles .textBox {
+    height: 1.5em;
+  }
+  .bldBox {
+    top: 1.5em;
     width: 100%;
-    border: 2px solid var(--main-color);
-    border-radius: 50px;
+  }
 }
-
-@media(max-width:768px) {
-    #article {
-        font-size: 2em;
-    }
-    #article #weatherBox span {
-        font-size: 0.75em;
-    }
-    .articles {
-        width: 90%;
-        height: auto;
-    }
-    .articles .textBox {
-        height: 1.5em;
-    }
-    .bldBox {
-        top: 1.5em;
-        width: 100%;
-    }
-}
-
-
 
 /* FOOTER */
 #footer {
-    font-size: 3rem;
-    width: 100%;
-    height: 3em;
+  font-size: 3rem;
+  width: 100%;
+  height: 3em;
 }
 
 #footer #source {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 1em;
-    bottom: 0;
-    font-size: 2rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1em;
+  bottom: 0;
+  font-size: 2rem;
 }
 
 #footer #source p a {
-    text-decoration: none;
-    color: blue;
+  text-decoration: none;
+  color: blue;
 }
 
-@media(max-width:768px) {
-    #footer #source {
-        font-size: 1rem;
-    }
+@media (max-width: 768px) {
+  #footer #source {
+    font-size: 1rem;
+  }
 }
-
 
 /*//////////////////////////////////////////*/
 /* admin/input_menu.html */
 #inputMenu_form {
-    width: 100%;
-    height: 100%;
-    font-size: 3rem;
-    text-align: center;
+  width: 100%;
+  height: 100%;
+  font-size: 3rem;
+  text-align: center;
 }
 #inputMenu_form .inputBox {
-    font-size: 2rem;
-    border: 2px solid var(--main-color);
+  font-size: 2rem;
+  border: 2px solid var(--main-color);
 }
 #inputMenu_form input[type="date"] {
-    width: 10em;
-    font-size: 2rem;
-    text-align: center;
-    border: 2px solid var(--main-color);
+  width: 10em;
+  font-size: 2rem;
+  text-align: center;
+  border: 2px solid var(--main-color);
 }
 #inputMenu_form select {
-    width: 10em;
-    font-size: 2rem;
-    text-align: center;
-    border: 2px solid var(--main-color);
+  width: 10em;
+  font-size: 2rem;
+  text-align: center;
+  border: 2px solid var(--main-color);
 }
 #inputMenu_form input[type="text"] {
-    width: 10em;
-    text-align: center;
+  width: 10em;
+  text-align: center;
 }
 #inputMenu_form .suggestions {
-    width: 10em;
-    font-size: 2rem;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: var(--sub-color);
-    border-bottom: 2px solid var(--main-color);
+  width: 10em;
+  font-size: 2rem;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--sub-color);
+  border-bottom: 2px solid var(--main-color);
 }
 #inputMenu_form .suggestions:hover {
-    background-color: var(--main-color);
-    cursor: pointer;
+  background-color: var(--main-color);
+  cursor: pointer;
 }
 #inputMenu_form input[type="submit"] {
-    width: 10em;
-    font-size: 2rem;
-    border: 2px solid var(--main-color);
-    cursor: pointer;
+  width: 10em;
+  font-size: 2rem;
+  border: 2px solid var(--main-color);
+  cursor: pointer;
 }
-
-
-
 
 /* SNOW EFFECT */
 .snowBox {
-    display: none;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 0;
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
 }
-
-
 
 /* STUFFS */
 .relative {
-    position: relative;
-    height: 100%;
+  position: relative;
+  height: 100%;
 }
 .showing {
-    display: block;
+  display: block;
 }
 .notShowing {
-    display: none;
+  display: none;
 }
 .block {
-    display: block;
+  display: block;
 }

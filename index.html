@@ -57,6 +57,8 @@
                 <span id="today_word" class="js-today_word notShowing"></span>
 
                 <span id="today_word_real" class="js-today_word_real"></span>
+                <span id="corona_notice">因新型冠状病毒的缘故，菜单暂不更新</span>
+                
                 <!-- D-DAY -->
                 <div id="dDayBox">
                     <div class="dDayItems">
@@ -68,7 +70,7 @@
                             <p class="dDayDate">2020.03.28</p>
                         </div>
                         <div class="dDayRight">
-                            <p class="dDayDays js-pkuDDay">D-??</p>
+                            <p class="dDayDays js-pkuDDay">D:??</p>
                         </div>    
                     </div class="dDayItems">
                     <div class="dDayItems">
@@ -80,7 +82,7 @@
                             <p class="dDayDate">2020.02.29</p>
                         </div>
                         <div class="dDayRight">
-                            <p class="dDayDays js-fudanDDay">D-??</p>
+                            <p class="dDayDays js-fudanDDay">D:??</p>
                         </div>    
                     </div class="dDayItems">
                     <div class="dDayItems">
@@ -92,7 +94,7 @@
                             <p class="dDayDate">2020.03.07</p>
                         </div>
                         <div class="dDayRight">
-                            <p class="dDayDays js-renminDDay">D-??</p>
+                            <p class="dDayDays js-renminDDay">D:??</p>
                         </div>    
                     </div class="dDayItems">
                 </div>
@@ -148,7 +150,9 @@
     <script>
         //PHP arrays into JS arrays
         var food = <? echo json_encode($food); ?>;
+        console.log(food);
         var foodDate = <? echo json_encode($food_date); ?>;
+        console.log(foodDate);
         var todayWords = <? echo json_encode($today_word); ?>;
     </script>
 
